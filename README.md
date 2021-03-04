@@ -15,18 +15,18 @@ Requirements include:
 *BROWSER
 *APACHE SERVER
 ```
-###  check if git is installed and up-to-date by using
+#### check if git is installed and up-to-date by using
 ```
 `$ git --version
 
 ```
-### If its not installed <a href="https://git-scm.com/ ">download</a>
+#### If its not installed <a href="https://git-scm.com/ ">download</a>
 
 
-### Install xampp <a href="https://www.apachefriends.org"> download</a>
+#### Install xampp <a href="https://www.apachefriends.org"> download</a>
 
 
-### Setting Up Database
+## Setting Up Database
 
  **Option 1**
 #### Import database
