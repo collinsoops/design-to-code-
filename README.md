@@ -20,14 +20,14 @@ Requirements include:
 `$ git --version
 
 ```
-If its not installed run <a href="https://git-scm.com/ ">download</a>
+If its not installed <a href="https://git-scm.com/ ">download</a>
 
 
 #### Install xampp <a href="https://www.apachefriends.org"> download</a>
 
 
 ### Setting Up Database
-
+```
  **Option 1**
 #### Import database
 
@@ -49,14 +49,9 @@ CREATE TABLE `activity` (
   `activity` varchar(100) NOT NULL,
   `activity_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+ALTER TABLE `activity`
+  ADD PRIMARY KEY (`activity_id`);
 
-
-INSERT INTO `activity` (`activity_id`, `activity`, `activity_time`) VALUES
-(1, 'Deployed warkation to production', '0000-00-00 00:00:00'),
-(2, 'Deployed Kitetail to staging', '0000-00-00 00:00:00'),
-(3, 'Deployed warkflow to staging', '0000-00-00 00:00:00'),
-(4, 'Deployed easywire to production', '0000-00-00 00:00:00'),
-(5, 'Deployed warkation to production', '0000-00-00 00:00:00');
 
 CREATE TABLE `projects` (
   `project_id` int(11) NOT NULL,
@@ -66,13 +61,8 @@ CREATE TABLE `projects` (
   `time` time NOT NULL,
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-
-INSERT INTO `projects` (`project_id`, `repo_name`, `url`, `type`, `time`, `address`) VALUES
-(0, 'Warkation', 'www.github.co.ke', '', '12:14:45', 'United states'),
-(1, 'Easywire', 'www.github.co.ke', '', '12:14:45', 'United states'),
-(3, 'Workflow', 'www.github.io', 'laravel', '00:00:00', 'United States'),
-(4, 'Talkslides', 'www.laravel.co.ke', 'Nextjs', '00:00:00', 'United states');
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`project_id`);
 
 
 
@@ -84,23 +74,16 @@ CREATE TABLE `user` (
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
-
-INSERT INTO `user` (`user_id`, `full_name`, `email_id`, `password`, `address`) VALUES
-(1, 'Debbie Lewis', 'debbi@gmail.com', '1234', 'United States');
-
-
-ALTER TABLE `activity`
-  ADD PRIMARY KEY (`activity_id`);
-
-
-ALTER TABLE `projects`
-  ADD PRIMARY KEY (`project_id`);
-
-
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 COMMIT;
+
+```
+
+
+
+
+
 
 
 
