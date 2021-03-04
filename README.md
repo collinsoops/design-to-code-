@@ -27,22 +27,17 @@ Requirements include:
 
 
 ### Setting Up Database
-```
+
  **Option 1**
 #### Import database
-
-Create the database first
+```
+Create the database first named flex
+```
 - **Option 2**
-    
-    Create database
-    
-    `$ CREATE DATABASE flex; `
-
-Import database from .sql file
-
- **Option 1**
-
-or create tables using Sql commands
+   
+Create database
+ ```   
+$ CREATE DATABASE flex; 
 
 ```
 
