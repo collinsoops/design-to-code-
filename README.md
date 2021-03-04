@@ -1,19 +1,20 @@
 
-# Project Title
+# Design to code 
 Design to code  is a simple page created by html, css-flexbox. it also has database.
 
 
 ## Installation
 
 ### Requirements
-
+```
 Requirements include:
 * HTML
 * CSS
 * PHP
 * SQL 
+*BROWSER
 *APACHE SERVER
-
+```
 check if git is installed and up-to-date
 `$ git --version
 
