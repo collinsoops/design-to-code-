@@ -72,7 +72,7 @@ img.jpg
 logo.PNG 
 ```
 
-Other commands used include:
+### Other commands used include:
 
 to add files to staging
 ```
