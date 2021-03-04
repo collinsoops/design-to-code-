@@ -42,41 +42,7 @@ Import database from sql file
 
 Import flex.sql in the files
 
-or create tables
-
-CREATE TABLE `activity` (
-  `activity_id` int(11) NOT NULL,
-  `activity` varchar(100) NOT NULL,
-  `activity_time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-ALTER TABLE `activity`
-  ADD PRIMARY KEY (`activity_id`);
-
-
-CREATE TABLE `projects` (
-  `project_id` int(11) NOT NULL,
-  `repo_name` varchar(30) NOT NULL,
-  `url` text NOT NULL,
-  `type` text NOT NULL,
-  `time` time NOT NULL,
-  `address` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-ALTER TABLE `projects`
-  ADD PRIMARY KEY (`project_id`);
-
-
-
-CREATE TABLE `user` (
-  `user_id` int(11) NOT NULL,
-  `full_name` varchar(30) NOT NULL,
-  `email_id` text NOT NULL,
-  `password` text NOT NULL,
-  `address` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`user_id`);
-COMMIT;
+or create tables using Sql
 
 ```
 
