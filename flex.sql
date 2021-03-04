@@ -1,50 +1,31 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 03, 2021 at 01:42 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.2
 
-# Project Title
-Design to code  is a simple page created by html, css-flexbox. it also has database.
-
-
-## Installation
-
-### Requirements
-
-Requirements include:
-* HTML
-* CSS
-* PHP
-* SQL 
-*APACHE SERVER
-
-check if git is installed and up-to-date
-`$ git --version
-
-If its not installed run
-visit https://git-scm.com/ and download
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-#### Install xampp
+--
+-- Database: `flex`
+--
 
-```
-https://www.apachefriends.org
+-- --------------------------------------------------------
 
-
-### Setting Up Database
-
-#### Import database
-
-Create the database first
-- **Option 1**
-    Change user to root
-    
-    Create database
-    
-    `$ CREATE DATABASE flex; `
-
-Import database from sql file
-
-Import flex.sql in the files
-
-or create tables
+--
+-- Table structure for table `activity`
+--
 
 CREATE TABLE `activity` (
   `activity_id` int(11) NOT NULL,
@@ -52,6 +33,9 @@ CREATE TABLE `activity` (
   `activity_time` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `activity`
+--
 
 INSERT INTO `activity` (`activity_id`, `activity`, `activity_time`) VALUES
 (1, 'Deployed warkation to production', '0000-00-00 00:00:00'),
@@ -59,6 +43,12 @@ INSERT INTO `activity` (`activity_id`, `activity`, `activity_time`) VALUES
 (3, 'Deployed warkflow to staging', '0000-00-00 00:00:00'),
 (4, 'Deployed easywire to production', '0000-00-00 00:00:00'),
 (5, 'Deployed warkation to production', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `projects`
+--
 
 CREATE TABLE `projects` (
   `project_id` int(11) NOT NULL,
@@ -69,6 +59,9 @@ CREATE TABLE `projects` (
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `projects`
+--
 
 INSERT INTO `projects` (`project_id`, `repo_name`, `url`, `type`, `time`, `address`) VALUES
 (0, 'Warkation', 'www.github.co.ke', '', '12:14:45', 'United states'),
@@ -76,7 +69,11 @@ INSERT INTO `projects` (`project_id`, `repo_name`, `url`, `type`, `time`, `addre
 (3, 'Workflow', 'www.github.io', 'laravel', '00:00:00', 'United States'),
 (4, 'Talkslides', 'www.laravel.co.ke', 'Nextjs', '00:00:00', 'United states');
 
+-- --------------------------------------------------------
 
+--
+-- Table structure for table `user`
+--
 
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
@@ -86,102 +83,36 @@ CREATE TABLE `user` (
   `address` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
+--
+-- Dumping data for table `user`
+--
 
 INSERT INTO `user` (`user_id`, `full_name`, `email_id`, `password`, `address`) VALUES
 (1, 'Debbie Lewis', 'debbi@gmail.com', '1234', 'United States');
 
+--
+-- Indexes for dumped tables
+--
 
+--
+-- Indexes for table `activity`
+--
 ALTER TABLE `activity`
   ADD PRIMARY KEY (`activity_id`);
 
-
+--
+-- Indexes for table `projects`
+--
 ALTER TABLE `projects`
   ADD PRIMARY KEY (`project_id`);
 
-
+--
+-- Indexes for table `user`
+--
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_id`);
 COMMIT;
 
-
-
-
-#### Setting up the project on git
-
-To itialize
-
-```
-$ git init
-```
-
-Clone the project from the repository
-
-```
-$ git clone https://github.com/collinsoops/design-to-code-.git
-```
-
-The folder structure will be as follows after cloning
-
-```
-
-
-css
-.getignore
-README.md
-flex.html
-flex.php
-flex.sql
-home-screens.03-constrained-multi-column-xl.png
-httpstailwindui_003.png
-img.jpg
-logo.PNG 
-```
-
-Other commands used include:
-
-
-```
-$ git add .
-```
-```
-$ git commit -m "updated files with database"
-```
-```
-$ git status 
-```
-```
-$ git remote add origin https://github.com/collinsoops/design-to-code-.git
-```
-
-```
-$ git push origin master
-```
-
-## Running 
-
-Access the site on browser
-
-
-### coding style 
-
--css-flexbox
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-
-## Authors
-
-* ** collinsoops** - *Initial work* https://github.com/collinsoops/flex/
-
-
-## License
-no licence
-
-## Acknowledgments
-
-* william
-
-
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
