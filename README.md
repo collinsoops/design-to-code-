@@ -18,11 +18,9 @@ Requirements include:
 ###  check if git is installed and up-to-date by using
 ```
 `$ git --version
-
-
+If its not installed run <a href="https://git-scm.com/ ">download</a>
 
 ```
-If its not installed run <a href="https://git-scm.com/>download</a>
 
 
 #### Install xampp <a href="https://www.apachefriends.org"> download</a>
