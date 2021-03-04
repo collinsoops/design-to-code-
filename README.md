@@ -82,12 +82,6 @@ COMMIT;
 
 
 
-
-
-
-
-
-
 #### Setting up the project on git
 
 To itialize
@@ -105,9 +99,7 @@ $ git clone https://github.com/collinsoops/design-to-code-.git
 The folder structure will be as follows after cloning
 
 ```
-
-
-css
+css folder
 .getignore
 README.md
 flex.html
@@ -121,36 +113,33 @@ logo.PNG
 
 Other commands used include:
 
-
+to add files to staging
 ```
 $ git add .
 ```
+To save changes in files to staging
 ```
 $ git commit -m "updated files with database"
 ```
-```
-$ git status 
-```
+Add to remote
 ```
 $ git remote add origin https://github.com/collinsoops/design-to-code-.git
 ```
-
+Push to the repository
 ```
 $ git push origin master
 ```
 
 ## Running 
+```
+Run the URL localhost/flex.php on browser
+```
 
-Access the site on browser
 
-
-### coding style 
-
--css-flexbox
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+### coding style used
+```
+css-flexbox
+```
 
 
 ## Authors
