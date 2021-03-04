@@ -38,11 +38,11 @@ Create the database first
     
     `$ CREATE DATABASE flex; `
 
-Import database from sql file
+Import database from .sql file
 
-Import flex.sql in the files
+ **Option 1**
 
-or create tables using Sql
+or create tables using Sql commands
 
 ```
 
