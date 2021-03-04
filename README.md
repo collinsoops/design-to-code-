@@ -20,10 +20,10 @@ Requirements include:
 `$ git --version
 
 ```
-If its not installed <a href="https://git-scm.com/ ">download</a>
+### If its not installed <a href="https://git-scm.com/ ">download</a>
 
 
-#### Install xampp <a href="https://www.apachefriends.org"> download</a>
+### Install xampp <a href="https://www.apachefriends.org"> download</a>
 
 
 ### Setting Up Database
