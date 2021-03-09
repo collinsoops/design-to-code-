@@ -26,6 +26,7 @@ $look = "SELECT * FROM projects";
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
+    <link href="css/font.css" rel="stylesheet" type="text/css">
     <link href="css/flex.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -35,7 +36,6 @@ $look = "SELECT * FROM projects";
     <div class="container">
         <div class="topheader">
             <div class="start"> <img src="logo.PNG" alt="hello" class="img"></div>
-
             <div class="center"></div>
             <div class="center"></div>
             <div class="center"></div>
@@ -43,11 +43,15 @@ $look = "SELECT * FROM projects";
             <div class="center"></div>
             <div class="center"></div>
             <div class="center"></div>
+            <div class="center"></div>
+            <div class="center"></div>
+            
             <div class="center"></div>
             <div class="center">
-                <input type="text-area" placeholder="Search for projects " style="color: aliceblue;" class="button" size="100" />
+                <input type="text-area" placeholder="Search for projects " style="color: aliceblue;" class="button" size="80" />
             </div>
-
+            <div class="center"></div>
+           
             <div class="end"></div>
 
             <div class="col1">
@@ -108,7 +112,7 @@ $look = "SELECT * FROM projects";
             <div class="side2">
                 <div class="top">
                     <h3 class="start">Projects</h3>
-                    <h4 class="end"><i class="fa fa-sort-asc"></i> sort<i class="fa-sort-up"></i> </h4>
+                    <h4 class="end"><i class="fa fa-sort-asc"></i> sort <i class="fa fa-sort-down"></i> </h4>
                 </div>
 
                 <div class="divider"></div>
@@ -125,18 +129,34 @@ $look = "SELECT * FROM projects";
 
                 <div class="topp">
                     <div class="top">
-                        <h4 class="start"> <i class="fa fa-circle" style="color: #32c48d;"></i><?php echo $got['repo_name'];?></h4>
-                        <h5 class="end col"> Visit site<i class="fa fa-star" class="yel"> </i></h5>
+                        <h4 class="start"> <i class="fa fa-circle-thin" style="color: #32c48d; font-size:15px;"></i>  <?php echo $got['repo_name'];?></h4>
+                        <h5 class="end col"> Visit site  
+                        <?php echo $got['status'];
+                        if( $got['status']='yes'){
+                           
+?>
+<i class="fa fa-star" style="color:yellow;"></i>
+<?php
+                        } else{
+
+?>
+<i class="fa fa-star" ></i>
+<?php
+
+        }
+                        
+     ?>
+    </h5>
 
 
                     </div>
                     <div class="top">
                         <h5 class="start col"><?php echo $us['full_name']; echo"/"; echo $got['repo_name']; ?></h5>
                         <?php 
-                        $start = strtotime(date("h:i:sa"));
+                        $start = strtotime(date("Y-m-d"));
                         $end = strtotime($got['time']);
-                        $mins = ($end - $start) / 60 / 60;
-                        
+                        $mins =($start-$end)/120000;
+                       
                         
                         
                         ?>
